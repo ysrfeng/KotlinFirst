@@ -5,7 +5,7 @@ package com.ysr.kotlinfirst
  * 邮箱 ysr200808@163.com
  */
 
-class LoginInfo {
+ class LoginInfo {
     var username: String? = null
     var districtcode: String? = null
 }
