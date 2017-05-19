@@ -1,5 +1,6 @@
 package com.ysr.kotlin.base
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
@@ -8,13 +9,14 @@ import android.support.v7.app.AppCompatActivity
  * 邮箱 ysr200808@163.com
  */
 abstract class  BaseActivity : AppCompatActivity() {
-
+    private var context: Context? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     //    doBeforeSetcontentView()
 
         setContentView(this.getLayoutId())
+        context = this
         this.initview()
         this.initPresenter()
     }

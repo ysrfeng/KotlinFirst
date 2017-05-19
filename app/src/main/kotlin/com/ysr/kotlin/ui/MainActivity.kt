@@ -5,6 +5,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : BaseActivity() {
+
     override fun initPresenter() {
 
     }
