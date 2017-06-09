@@ -1,7 +1,7 @@
 package com.ysr.kotlin.service
 
+import com.ysr.kotlin.bean.UserData
 import com.ysr.kotlin.ui.Result
-
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -17,7 +17,10 @@ import retrofit2.http.Query
 interface GithubApiService {
     @GET("search/users")
     fun search(@Query("q") query: String, @Query("page") page: Int, @Query("per_page") perPage: Int): Observable<Result>
-
+    @GET("repos/ysrfeng/QrCode/stargazers")
+    fun getStartGazers(): Observable<List<UserData>>
+//    @GET("search/users")
+//    fun search(@Query("q") query: String, @Query("page") page: Int, @Query("per_page") perPage: Int): Observable<Result>
     /**
      * Factory class for convenient creation of the Api Service interface
      */
