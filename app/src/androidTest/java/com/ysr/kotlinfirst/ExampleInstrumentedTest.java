@@ -23,4 +23,13 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.ysr.kotlinfirst", appContext.getPackageName());
     }
+    @RunWith(AndroidJUnit4.class)
+    class Reg {
+        @Test
+        public void main() {
+            String s = "a,b,c,,";
+            String[] t = s.split(",");
+            System.out.print(t.length);
+        }
+    }
 }

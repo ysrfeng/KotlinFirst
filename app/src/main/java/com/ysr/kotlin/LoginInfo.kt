@@ -1,4 +1,4 @@
-package com.ysr.kotlinfirst
+package com.ysr.kotlin
 
 /**
  * Created by ysr on 2017/5/18 上午10:52.
